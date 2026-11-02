@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Heritage-Luxury Indian Color Palette Variables */
+  --color-maroon: #5C0E1E;
+  --color-maroon-dark: #460814;
+  --color-maroon-deep: #32050e;
+  --color-maroon-light: #7A1B2E;
+  --color-maroon-tint: #fdf5f6;
+
+  --color-gold: #C9A15A;
+  --color-gold-bright: #D4AF6A;
+  --color-gold-light: #e7cf93;
+  --color-gold-pale: #f8f1de;
+  --color-gold-dark: #8c652b;
+
+  --color-cream: #F5EDE0;
+  --color-cream-card: #FAF6EF;
+  --color-cream-border: #E8DCBE;
+  --color-charcoal: #1E1617;
+  --color-charcoal-muted: #5e4a4b;
+}
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--color-charcoal);
+    background-color: var(--color-cream);
+  }
+
+  h1, h2, h3, h4, .font-heritage {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Smooth custom scrollbars with gold and maroon accents */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1e2cd;
+}
+::-webkit-scrollbar-thumb {
+  background: #C9A15A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7A1B2E;
+}
+
+/* Luxury Indian Heritage Utilities */
+.text-gold-foil {
+  background: linear-gradient(135deg, #dfc187 0%, #D4AF6A 40%, #F5E5C9 60%, #C9A15A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-maroon-gradient {
+  background: linear-gradient(135deg, #7A1B2E 0%, #5C0E1E 50%, #460814 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtle Jali (Lattice) / Star Pattern Overlay */
+.bg-jali-dots {
+  background-image: radial-gradient(rgba(201, 161, 90, 0.18) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.bg-jali-maroon {
+  background-image: radial-gradient(rgba(212, 175, 106, 0.22) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+/* Pulsing audio ring animation in gold */
+@keyframes audio-pulse-gold {
+  0% {
+    box-shadow: 0 0 0 0 rgba(212, 175, 106, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(212, 175, 106, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(212, 175, 106, 0);
+  }
+}
+
+.animate-mic-ring {
+  animation: audio-pulse-gold 1.8s infinite;
+}
+
+/* Luxury card with subtle gold border */
+.card-heritage {
+  background-color: #FAF6EF;
+  border: 1px solid rgba(201, 161, 90, 0.35);
+  box-shadow: 0 4px 20px -2px rgba(92, 14, 30, 0.05);
+}
+
+.card-heritage:hover {
+  border-color: rgba(201, 161, 90, 0.7);
+  box-shadow: 0 12px 28px -4px rgba(92, 14, 30, 0.1);
+}
